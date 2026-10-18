@@ -18,9 +18,8 @@
   font-family: "AdobeClean", "Segoe UI", sans-serif;
 }
 
-.stApp,
-.stApp * {
-  font-family: "AdobeClean", "Segoe UI", sans-serif;
+[data-testid="stIconMaterial"] {
+  font-family: "Material Symbols Rounded" !important;
 }
 
 [data-testid="stHeader"] {
