@@ -1,0 +1,250 @@
+:root {
+  color-scheme: dark;
+  --app-bg: #151815;
+  --sidebar-bg: #1b201c;
+  --surface: #1c211d;
+  --surface-raised: #171b18;
+  --line: #333b34;
+  --text: #e7eae3;
+  --muted: #a0a99e;
+  --accent: #a3b494;
+  --accent-hover: #8fa181;
+  --accent-wash: #293229;
+}
+
+.stApp {
+  background: var(--app-bg);
+  color: var(--text);
+  font-family: "AdobeClean", "Segoe UI", sans-serif;
+}
+
+.stApp,
+.stApp * {
+  font-family: "AdobeClean", "Segoe UI", sans-serif;
+}
+
+[data-testid="stHeader"] {
+  background: rgba(21, 24, 21, 0.92);
+}
+
+[data-testid="stSidebar"] {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--line);
+}
+
+[data-testid="stSidebar"] > div:first-child {
+  background: transparent;
+}
+
+.block-container {
+  max-width: 1180px;
+  padding: 2.4rem clamp(1.25rem, 4vw, 3.5rem) 4rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 2.65rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.12 !important;
+}
+
+h2,
+h3 {
+  font-weight: 550 !important;
+}
+
+[data-testid="stSidebar"] h1 {
+  font-size: 1.65rem !important;
+  letter-spacing: -0.045em;
+}
+
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+  margin-top: 0.8rem;
+}
+
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stCaptionContainer"] {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] p {
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+hr {
+  border-color: var(--line);
+  margin: 2rem 0;
+}
+
+[data-testid="stMetric"] {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent);
+  border-radius: 5px;
+  padding: 0.9rem 1rem;
+}
+
+[data-testid="stMetricLabel"] {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+[data-testid="stMetricValue"] {
+  color: var(--text);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+[data-testid="stButton"] button,
+[data-testid="stBaseButton-secondaryFormSubmit"] {
+  min-height: 2.7rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid #3b443c;
+  border-radius: 5px;
+  font-weight: 550;
+  transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+
+[data-testid="stButton"] button[kind="primary"],
+[data-testid="stBaseButton-primary"] {
+  color: #171b18;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+[data-testid="stButton"] button:hover,
+[data-testid="stBaseButton-secondaryFormSubmit"]:hover {
+  color: var(--text);
+  background: var(--accent-wash);
+  border-color: var(--accent);
+}
+
+[data-testid="stButton"] button[kind="primary"]:hover,
+[data-testid="stBaseButton-primary"]:hover {
+  color: #fff;
+  background: var(--accent-hover);
+}
+
+[data-testid="stButton"] button:active,
+[data-testid="stBaseButton-secondaryFormSubmit"]:active,
+[data-testid="stBaseButton-primary"]:active {
+  transform: translateY(1px);
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div,
+[data-testid="stNumberInput"] input,
+[data-testid="stTextInput"] input {
+  color: var(--text);
+  background: var(--surface-raised);
+  border-color: #3b443c;
+  border-radius: 5px;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div:focus-within,
+[data-testid="stNumberInput"] input:focus,
+[data-testid="stTextInput"] input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+[data-testid="stAlert"] {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+[data-testid="stTable"] {
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+}
+
+[data-testid="stTable"] table {
+  border-collapse: collapse;
+  color: var(--text);
+}
+
+[data-testid="stTable"] thead th {
+  color: var(--muted);
+  background: transparent;
+  border-bottom: 1px solid #3b443c;
+  font-size: 0.85rem;
+  font-weight: 550;
+}
+
+[data-testid="stTable"] tbody tr {
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+}
+
+[data-testid="stTable"] tbody tr:hover {
+  background: rgba(89, 107, 83, 0.055);
+}
+
+[data-testid="stTable"] td,
+[data-testid="stTable"] th {
+  padding: 0.8rem 0.7rem;
+}
+
+.workout-empty {
+  margin: 2rem 0 2.5rem;
+  padding: clamp(2rem, 6vw, 4.5rem) 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background:
+    linear-gradient(120deg, rgba(89, 107, 83, 0.055), transparent 48%),
+    var(--surface);
+  text-align: center;
+}
+
+.workout-empty h2 {
+  margin: 0 0 0.6rem;
+  color: var(--text);
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
+}
+
+.workout-empty p {
+  max-width: 38rem;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+[data-testid="stIFrame"] iframe {
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .block-container {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  [data-testid="stMetric"] {
+    padding: 0.75rem;
+  }
+
+  [data-testid="stMetricValue"] {
+    font-size: 1.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
